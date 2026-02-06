@@ -11,7 +11,7 @@ plugins {
     alias(libs.plugins.kover) // Gradle Kover Plugin
 }
 
-group = providers.gradleProperty("pluginGroup").get()
+group = "com.simple.decisiontable"
 version = providers.gradleProperty("pluginVersion").get()
 
 // Set the JVM language level used to build the project.
@@ -54,7 +54,7 @@ dependencies {
 // Configure IntelliJ Platform Gradle Plugin - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-extension.html
 intellijPlatform {
     pluginConfiguration {
-        name = providers.gradleProperty("pluginName")
+        name = "Simple Decision Table Editor"
         version = providers.gradleProperty("pluginVersion")
 
         // Extract the <!-- Plugin description --> section from README.md and provide for the plugin's manifest
@@ -154,6 +154,14 @@ intellijPlatformTesting {
             plugins {
                 robotServerPlugin()
             }
+        }
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs("src/main/kotlin", "src/main/resources/base_java")
         }
     }
 }
