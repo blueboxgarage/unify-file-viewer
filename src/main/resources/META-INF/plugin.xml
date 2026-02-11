@@ -1,20 +1,22 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.simple.decisiontable</id>
-    <name>Simple Decision Table Editor</name>
+    <name>Unify File Viewer</name>
     <vendor>Open Source</vendor>
+
+    <idea-version since-build="201" until-build="243.*"/>
 
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileEditorProvider implementation="org.jetbrains.plugins.template.editor.DecisionTableFileEditorProvider"/>
+        <fileEditorProvider implementation="org.jetbrains.plugins.template.editor.UnifyFileViewerProvider"/>
     </extensions>
 
     <actions>
-        <action id="EditDecisionTableAction"
-                class="org.jetbrains.plugins.template.editor.EditDecisionTableAction"
-                text="Edit Decision Table"
-                description="Edit this JSON Decision Table">
+        <action id="UnifyFileViewerAction"
+                class="org.jetbrains.plugins.template.editor.UnifyFileViewerAction"
+                text="Unify File Viewer"
+                description="Open this JSON file in the Unify File Viewer">
             <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         </action>

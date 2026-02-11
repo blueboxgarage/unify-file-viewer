@@ -33,6 +33,9 @@ repositories {
 dependencies {
     testImplementation(libs.junit)
     testImplementation(libs.opentest4j)
+    testImplementation("org.jetbrains.kotlin:kotlin-test:2.3.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.0")
 
     // IntelliJ Platform Gradle Plugin Dependencies Extension - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-dependencies-extension.html
     intellijPlatform {
@@ -49,12 +52,15 @@ dependencies {
 
         testFramework(TestFrameworkType.Platform)
     }
+
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.15.2")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.15.2")
 }
 
 // Configure IntelliJ Platform Gradle Plugin - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-extension.html
 intellijPlatform {
     pluginConfiguration {
-        name = "Simple Decision Table Editor"
+        name = "Unify File Viewer"
         version = providers.gradleProperty("pluginVersion")
 
         // Extract the <!-- Plugin description --> section from README.md and provide for the plugin's manifest
@@ -128,6 +134,15 @@ kover {
 }
 
 tasks {
+    jar {
+        archiveBaseName.set("SimpleDecisionTableEditor")
+        from(sourceSets.main.get().output)
+        manifest {
+            attributes["Implementation-Title"] = "Simple Decision Table Editor"
+            attributes["Implementation-Version"] = version
+        }
+    }
+
     wrapper {
         gradleVersion = providers.gradleProperty("gradleVersion").get()
     }
@@ -161,7 +176,10 @@ intellijPlatformTesting {
 sourceSets {
     main {
         java {
-            srcDirs("src/main/kotlin", "src/main/resources/base_java")
+            setSrcDirs(listOf("src/main/kotlin", "src/main/java", "src/main/resources/base_java"))
+        }
+        resources {
+            setSrcDirs(listOf("src/main/resources"))
         }
     }
 }

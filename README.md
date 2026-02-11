@@ -1,19 +1,23 @@
-# Simple Decision Table Editor
+# Unify File Viewer
 
 <!-- Plugin description -->
-A minimal, open-source IntelliJ plugin for viewing and editing decision tables stored as JSON files.
-<!-- Plugin description end -->
+Unify File Viewer is an IntelliJ plugin that lets you visually explore and edit JSON files with a modern, collapsible tree view and a decision table editor. 
 
-## Features
+**Key Features:**
+- Context menu action: **Unify File Viewer** for any `.json` file
+- Switch between a Decision Table Editor and an Explore Model (tree) view
+- Collapsible, interactive JSON explorer with path highlighting and copy support
 - Table-based UI for editing decision tables
 - Add/edit/remove rows and columns
 - Save changes directly to JSON
-- Context menu action: "Edit Decision Table"
+
+<!-- Plugin description end -->
 
 ## Usage
-- Right-click any `.json` decision table file and select **Edit Decision Table**
-- Or, open the file to launch the table editor
+- Right-click any `.json` file and select **Unify File Viewer**
+- Switch between **Decision Table Editor** and **Explore Model** tabs in the IDE
+- In Explore Model, click any node to highlight/copy its path in the JSON
 
 ---
 
-*This project is a clean, simple starting point for decision table editing in IntelliJ-based IDEs.*
+*Unify File Viewer brings powerful, user-friendly JSON exploration and editing to your IntelliJ-based IDEs.*

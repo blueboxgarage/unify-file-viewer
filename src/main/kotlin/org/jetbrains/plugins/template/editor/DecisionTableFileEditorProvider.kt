@@ -43,9 +43,9 @@ data class DTCell(val name: String = "", val value: String = "")
 object DecisionTableJsonUtil {
     private val mapper = jacksonObjectMapper()
     fun loadFromFile(file: java.io.File): DecisionTable {
-        val root = mapper.readTree(file)
-        val tableNode = root.get("decision_table")
-        return mapper.treeToValue(tableNode, DecisionTable::class.java)
+        val root = mapper.readTree(file) ?: return DecisionTable()
+        val tableNode = root.get("decision_table") ?: return DecisionTable()
+        return mapper.treeToValue(tableNode, DecisionTable::class.java) ?: DecisionTable()
     }
     fun saveToFile(table: DecisionTable, file: java.io.File) {
         val root = mapper.createObjectNode()
@@ -279,4 +279,73 @@ class DecisionTableTableModel(
         }
         return "$header\n$rows"
     }
+}
+
+class UnifyFileViewerProvider : FileEditorProvider {
+    override fun accept(project: Project, file: VirtualFile): Boolean {
+        return file.extension == "json"
+    }
+
+    override fun createEditor(project: Project, file: VirtualFile): FileEditor {
+        return UnifyFileViewerEditor(file)
+    }
+
+    override fun getEditorTypeId(): String = "unify-file-viewer"
+    override fun getPolicy(): FileEditorPolicy = FileEditorPolicy.PLACE_BEFORE_DEFAULT_EDITOR
+}
+
+class UnifyFileViewerEditor(private val file: VirtualFile) : UserDataHolderBase(), FileEditor {
+    private val panel: JPanel
+    private val editorView: DecisionTableFileEditor
+    private val explorerView: ExploreModelFileEditor
+    private var currentView: JComponent
+
+    init {
+        editorView = DecisionTableFileEditor(file)
+        explorerView = ExploreModelFileEditor(file)
+        panel = JPanel(java.awt.BorderLayout())
+        val switchPanel = JPanel(java.awt.FlowLayout(java.awt.FlowLayout.LEFT))
+        val editorButton = JButton("Decision Table Editor")
+        val explorerButton = JButton("Explore Model")
+        switchPanel.add(editorButton)
+        switchPanel.add(explorerButton)
+        panel.add(switchPanel, java.awt.BorderLayout.NORTH)
+        // Use ExploreModelPanel with path highlight callback
+        val explorePanel = ExploreModelPanel(file.inputStream.bufferedReader().use { it.readText() }) { jsonPath ->
+            // Switch to editor view and highlight path
+            panel.remove(currentView)
+            currentView = editorView.component
+            panel.add(currentView, java.awt.BorderLayout.CENTER)
+            panel.revalidate()
+            panel.repaint()
+            // TODO: Implement highlight logic in editorView for jsonPath
+        }
+        currentView = explorePanel
+        panel.add(currentView, java.awt.BorderLayout.CENTER)
+        editorButton.addActionListener {
+            panel.remove(currentView)
+            currentView = editorView.component
+            panel.add(currentView, java.awt.BorderLayout.CENTER)
+            panel.revalidate()
+            panel.repaint()
+        }
+        explorerButton.addActionListener {
+            panel.remove(currentView)
+            currentView = explorePanel
+            panel.add(currentView, java.awt.BorderLayout.CENTER)
+            panel.revalidate()
+            panel.repaint()
+        }
+    }
+
+    override fun getComponent(): JComponent = panel
+    override fun getPreferredFocusedComponent(): JComponent? = null
+    override fun getName(): String = "Unify File Viewer"
+    override fun setState(state: FileEditorState) {}
+    override fun isModified(): Boolean = false
+    override fun isValid(): Boolean = file.isValid
+    override fun addPropertyChangeListener(listener: PropertyChangeListener) {}
+    override fun removePropertyChangeListener(listener: PropertyChangeListener) {}
+    override fun dispose() {}
+    override fun getFile(): VirtualFile = file
 }
