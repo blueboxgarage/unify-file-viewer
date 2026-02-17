@@ -1,0 +1,915 @@
+{
+  "application" : {
+    "journey_discriminator" : "INDIVIDUAL",
+    "pcn" : "2025309CB00003USD",
+    "secure_id" : "IEVpw6W6ceVlccSuInx5ynnMnuCncE0J1tZn5Pva3IKuavPz",
+    "reentry_base_url" : "https://loans-1-qa.americanexpress.com/en-US/global-pay/us/apply",
+    "channel_received_datetime" : "2025-Jun-03 07:06:02.336 UTC",
+    "app_received_datetime" : "2025-Nov-13 12:07:25.508 UTC",
+    "application_category" : "GLOBAL_PAY",
+    "app_type_cd" : "L",
+    "app_type_cd_desc" : "Consumer",
+    "market_id" : "840",
+    "is_app_update" : false,
+    "journey" : "INSTANT_ACCOUNT_LITE",
+    "dynamic_journey" : "DYNAMIC_INSTANT",
+    "assistants" : [ {
+      "type" : "APPLICATION_SUBMITTER"
+    } ],
+    "is_customer_offline" : true,
+    "additional_beneficial_owners_exist" : false,
+    "country_numeric_code" : "840",
+    "identifiers" : [ {
+      "system" : "ONESTREAM_VISITOR_TRACKING",
+      "id" : "123ftrd-3e8e-40e5-9a4f-qwerty12345"
+    }, {
+      "system" : "NEUSTAR_TRACKING",
+      "id" : "b3c17855af97468b912159a6c3457508"
+    }, {
+      "system" : "BIOCATCH_VISITOR_TRACKING",
+      "id" : "b3c17855af97468b912159a6c3457508"
+    }, {
+      "system" : "INAUTH_TRANSACTION_IDENTIFIER",
+      "id" : "b3c17855af97468b912159a6c3457508"
+    }, {
+      "system" : "TERMS_AND_CONDITIONS_DOCUMENT_IDENTIFIER",
+      "id" : "US_GLOBAL_PAY_AGREEMENT_2022-02-23"
+    } ],
+    "consents" : [ {
+      "type" : "RESTRICTED_BUSINESS",
+      "is_accepted" : false,
+      "date_time" : "2021-Aug-17 16:48:32.028 UTC"
+    } ],
+    "individuals" : [ {
+      "number" : 0,
+      "billing" : {
+        "address_type" : "HOME",
+        "currency" : "USD"
+      },
+      "type" : "PRIMARY",
+      "emails" : [ {
+        "type" : "PERSONAL",
+        "email_id" : "go2unifyncltestemail@aexp.com",
+        "is_prefilled" : false
+      } ],
+      "birth_date" : "1978-Aug-20",
+      "names" : [ {
+        "seq_no" : 0,
+        "name" : {
+          "middle" : "",
+          "last" : "NABGVFC",
+          "first" : "YTGFVC",
+          "is_prefilled" : true
+        }
+      } ],
+      "products" : [ {
+        "seq_no" : 0
+      } ],
+      "companies" : [ {
+        "position_in_business" : "GENERAL_MANAGER"
+      } ],
+      "addresses" : [ {
+        "address" : {
+          "line1" : "37 RD",
+          "city" : "LAKEWOOD",
+          "postal_code" : "87232",
+          "region" : "CO",
+          "country" : "840",
+          "is_prefilled" : true
+        },
+        "type" : "HOME",
+        "seq_no" : 0
+      } ],
+      "foreign_exchange_payment" : [ {
+        "amount" : "5000",
+        "count" : "2",
+        "personal_payment" : false,
+        "frequency" : "MONTHLY",
+        "purpose" : [ "CHARITABLE_FUNDING", "CONSULTANCY_OR_OUTSIDE_SERVICES" ],
+        "destination_countries" : [ {
+          "code" : "356"
+        } ]
+      } ],
+      "phones" : [ {
+        "phone" : {
+          "phone_number" : "7013383686",
+          "modified" : [ {
+            "field" : "phone_number"
+          } ],
+          "is_prefilled" : false
+        },
+        "type" : "MOBILE",
+        "seq_no" : 0
+      } ],
+      "identities" : [ {
+        "seq_no" : 0,
+        "number" : "248922223",
+        "issue_date" : "",
+        "expiry_date" : "",
+        "type" : "SSN",
+        "is_prefilled" : true
+      } ],
+      "modified" : [ {
+        "field" : "email"
+      }, {
+        "field" : "position_in_business"
+      } ],
+      "pace" : {
+        "product_arrangement" : "8bf07b9a-3736-4573-ac58-7df427458336",
+        "experiences" : [ {
+          "rank" : 0,
+          "available_to" : "OWNER",
+          "term_duration" : [ {
+            "identifier" : "16eee1fa-fa88-48b2-9252-ed1fa98ca46d",
+            "unit" : "",
+            "value" : 0,
+            "start_timestamp" : "",
+            "end_timestamp" : ""
+          }, {
+            "identifier" : "e5c0acaf-c72f-429f-bd6f-3b68cc9da798",
+            "unit" : "",
+            "value" : 0,
+            "start_timestamp" : "",
+            "end_timestamp" : ""
+          }, {
+            "identifier" : "db5f66b5-a2ef-4935-b753-3d92a1940c9e",
+            "unit" : "",
+            "value" : 0,
+            "start_timestamp" : "",
+            "end_timestamp" : ""
+          }, {
+            "identifier" : "d202a129-ee69-4422-be86-c68d955d6452",
+            "unit" : "",
+            "value" : 0,
+            "start_timestamp" : "",
+            "end_timestamp" : ""
+          }, {
+            "identifier" : "82a731cc-9247-4f06-89c8-2d553f98fbff",
+            "unit" : "",
+            "value" : 0,
+            "start_timestamp" : "",
+            "end_timestamp" : ""
+          }, {
+            "identifier" : "07f05721-8f6b-4354-91ad-689de5e85805",
+            "unit" : "",
+            "value" : 0,
+            "start_timestamp" : "",
+            "end_timestamp" : ""
+          }, {
+            "identifier" : "1019bc36-f2ae-4ef3-9844-abfb1934bc7d",
+            "unit" : "",
+            "value" : 0,
+            "start_timestamp" : "",
+            "end_timestamp" : ""
+          }, {
+            "identifier" : "8977ad2e-e4dc-4544-a855-4f0f3c58f494",
+            "unit" : "",
+            "value" : 0,
+            "start_timestamp" : "",
+            "end_timestamp" : ""
+          }, {
+            "identifier" : "c91436ac-1c4c-47ef-bf95-517b8037e5d7",
+            "unit" : "",
+            "value" : 0,
+            "start_timestamp" : "",
+            "end_timestamp" : ""
+          }, {
+            "identifier" : "b9116bb1-5f92-49ee-bafe-1e18d7af0905",
+            "unit" : "",
+            "value" : 0,
+            "start_timestamp" : "",
+            "end_timestamp" : ""
+          }, {
+            "identifier" : "da4faf4f-e5d8-4831-b65d-db3ebf34f9b7",
+            "unit" : "",
+            "value" : 0,
+            "start_timestamp" : "",
+            "end_timestamp" : ""
+          }, {
+            "identifier" : "e8e9a43b-8c2a-40fe-b4b6-ba0f4fdb4546",
+            "unit" : "",
+            "value" : 0,
+            "start_timestamp" : "",
+            "end_timestamp" : ""
+          }, {
+            "identifier" : "50547713-35d7-45df-a780-ec58f65077ee",
+            "unit" : "",
+            "value" : 0,
+            "start_timestamp" : "",
+            "end_timestamp" : ""
+          } ],
+          "issuance_product_code" : "",
+          "fis_code" : "0000"
+        } ],
+        "pricing_identifier" : "adb31f47-a1c6-4759-a8f1-55370d3ccbfe"
+      },
+      "experience_id" : "453430d1-b82d-46db-9902-e2dcab96b8d2",
+      "scrubbed_addresses" : [ {
+        "type" : "HOME",
+        "address" : {
+          "line1" : "374 EAST ST PO",
+          "line2" : "",
+          "line3" : "",
+          "line4" : "",
+          "city" : "BLOOMSBURG",
+          "state" : "PA",
+          "post_cd" : "178151847",
+          "building_no" : "",
+          "building_nm" : "",
+          "sub_building_no" : "",
+          "sub_building_nm" : "",
+          "street_no" : "",
+          "street_nm" : "",
+          "country_alpha2_cd" : "US",
+          "pbsa" : "N",
+          "cmra" : "N"
+        }
+      } ],
+      "profile_info" : {
+        "has_toxic_account" : false,
+        "vip_match_found" : false
+      },
+      "matched_consumers" : [ {
+        "number" : 0,
+        "cm15" : "371270025401043",
+        "match_ind" : "D",
+        "customer_id" : "324982982",
+        "account_status" : "ACTIVE",
+        "account_number" : "1125850126500",
+        "market_id" : "US",
+        "account_own_role_cd" : "BASIC",
+        "product" : {
+          "category_code" : "CBP",
+          "business_unit_type_code" : "N",
+          "full_name" : "Some Product Name"
+        },
+        "addresses" : [ {
+          "seq_no" : 0,
+          "address" : {
+            "line1" : "123 Main St",
+            "line2" : "Suite 101",
+            "line3" : "",
+            "line4" : "",
+            "city" : "SUNRISE",
+            "country_alpha2_cd" : "US",
+            "postal_code" : "33325",
+            "region" : "FLORIDA",
+            "address_start_date" : "",
+            "address_end_date" : ""
+          }
+        } ],
+        "identity" : [ {
+          "type" : "SSN",
+          "number" : "249567123"
+        } ],
+        "names" : [ {
+          "seq_no" : 0,
+          "name" : {
+            "first" : "Bobby",
+            "middle" : "",
+            "last" : "Miles",
+            "full" : ""
+          }
+        } ],
+        "dob" : "1997-06-08",
+        "scores" : {
+          "government_document_identity" : "100",
+          "address" : {
+            "final_score" : "100.0"
+          },
+          "full_name" : "100",
+          "first_name" : "100",
+          "last_name" : "100",
+          "date_of_birth" : "1"
+        }
+      } ],
+      "address_is_tenured" : true,
+      "risk_info" : {
+        "rod" : {
+          "invocation_count" : 1,
+          "history_reference" : {
+            "identifiers" : [ {
+              "type" : "PROCESS_CONTROL_NUMBER",
+              "value" : "20213496924734JPY"
+            }, {
+              "type" : "CORRELATION_ID",
+              "value" : "4168d478-72b3-4510-936c-75058ebec6e7"
+            }, {
+              "type" : "APPLICANT_ID",
+              "value" : "0"
+            } ]
+          },
+          "credit_decisions" : [ {
+            "product" : {
+              "product_id" : "C48",
+              "product_type" : "CARD",
+              "specifications" : [ {
+                "type" : "PAYMENT_TYPE_CODE",
+                "value" : "Charge"
+              }, {
+                "type" : "PRODUCT",
+                "value" : "PL"
+              }, {
+                "type" : "SUB_PRODUCT",
+                "value" : "STD"
+              }, {
+                "type" : "PROCESS_PATH_CODE",
+                "value" : "PF1"
+              }, {
+                "type" : "CHANNEL_CODE",
+                "value" : "IA"
+              }, {
+                "type" : "INTERACTIVE_SUB_CHANNEL_CODE",
+                "value" : "Direct"
+              } ],
+              "requested_line_of_credit" : 0,
+              "max_line_of_credit" : 0
+            },
+            "decision" : {
+              "decision_code" : "APPROVE",
+              "decision_reason_code" : "AA",
+              "reason_factor" : "",
+              "status" : "",
+              "counter_offer_reason_code" : "",
+              "counter_offer_reason_description" : "",
+              "decision_routing_code" : "",
+              "decision_routing_description" : "",
+              "approved_billing_option" : "",
+              "approved_liability" : ""
+            },
+            "scores" : [ {
+              "name" : "FICO",
+              "value" : 0,
+              "is_valid" : false,
+              "factors" : {
+                "type" : "DEFAULT"
+              }
+            } ],
+            "income" : {
+              "total_income_amount" : 0,
+              "cut_off" : 0
+            },
+            "line_assignment" : {
+              "line_of_credit" : {
+                "proactive_line_reallocation_indicator" : false,
+                "line_without_proactive_reallocation" : 1200,
+                "cash_line_without_proactive_allocation" : 1000,
+                "is_embedded_lending_on_charge" : false,
+                "auto_cash_enrollment_indicator" : false
+              }
+            },
+            "credit_data_sources" : [ {
+              "seq_no" : 0,
+              "source_name" : "JICC",
+              "source_type" : "BUREAU_CONSUMER",
+              "transaction_identifier" : "f9de12bc838943439ed69ed2a587ac74",
+              "is_used_in_scoring" : true
+            }, {
+              "seq_no" : 1,
+              "source_name" : "CIC",
+              "source_type" : "BUREAU_CONSUMER",
+              "transaction_identifier" : "7e06322733b34829ae6a5baa0206251b",
+              "is_used_in_scoring" : true
+            } ],
+            "credit_strategies" : [ {
+              "name" : "CUSTOMER_MANAGEMENT_STRATEGY",
+              "value" : ""
+            } ],
+            "seq_no" : 0
+          } ],
+          "fraud_decisions" : {
+            "fraud_decision" : {
+              "fraud_flag" : false,
+              "fraud_data_count" : 0,
+              "fraud_score" : 29,
+              "fraud_recommendation" : "NONE"
+            },
+            "credit_bust_out_decision" : {
+              "cbo_data_count" : 0,
+              "cbo_flag" : false
+            },
+            "scores" : [ {
+              "value" : 29,
+              "type" : "FRAP_GBM"
+            }, {
+              "value" : 0,
+              "type" : "CBO_GBM"
+            } ],
+            "opsBEPN" : [ {
+              "name" : "CELLPHONE",
+              "type" : "UNKNOWN",
+              "opsEligibility" : "INELIGIBLE",
+              "source" : [ "APP" ],
+              "value" : "040-6573-8278"
+            } ],
+            "fraud_data_sources" : [ {
+              "seq_no" : 0,
+              "rod_invocation_count" : 1,
+              "source_name" : "BIOCBM",
+              "source_type" : "NON_BUREAU",
+              "transaction_identifier" : "bd36bf8fd97649f8b1bf3b433b884450"
+            }, {
+              "seq_no" : 1,
+              "rod_invocation_count" : 1,
+              "source_name" : "EAVALIDATOR",
+              "source_type" : "NON_BUREAU",
+              "transaction_identifier" : "62454ee53017468e9fd6c2a3ca822620"
+            } ]
+          },
+          "risk_recommendation" : {
+            "risk_recommendation" : "APPROVE",
+            "recommendation_reasons" : [ "" ]
+          }
+        }
+      },
+      "decision" : {
+        "recommended" : {
+          "code" : "A",
+          "reason_code" : "AA"
+        },
+        "previous" : {
+          "code" : "P",
+          "reason_code" : "PENDED"
+        },
+        "final" : {
+          "code" : "A",
+          "reason_code" : "AA",
+          "reason_desc" : "Approved",
+          "ts" : "2025-Nov-13 12:07:27.592 UTC"
+        }
+      },
+      "verification_info" : [ {
+        "verification_field" : "Home Address",
+        "verification_flag" : true,
+        "sources" : [ {
+          "source" : "C360"
+        }, {
+          "source" : "EXP"
+        } ],
+        "verification_date_time" : "2025-Nov-13 12:07:26.417 UTC"
+      }, {
+        "verification_field" : "Applicant Name",
+        "verification_flag" : true,
+        "sources" : [ {
+          "source" : "C360"
+        }, {
+          "source" : "EXP"
+        } ],
+        "verification_date_time" : "2025-Nov-13 12:07:26.417 UTC"
+      }, {
+        "verification_field" : "Date Of Birth",
+        "verification_flag" : true,
+        "sources" : [ {
+          "source" : "EXP"
+        } ],
+        "verification_date_time" : "2025-Nov-13 12:07:26.417 UTC"
+      }, {
+        "verification_field" : "National ID",
+        "verification_flag" : true,
+        "sources" : [ {
+          "source" : "EXP"
+        } ],
+        "verification_date_time" : "2025-Nov-13 12:07:26.417 UTC"
+      } ],
+      "lexis_nexis" : {
+        "biid" : {
+          "name_address_ssn_summary" : 10,
+          "cvi" : 30,
+          "risk_indicators" : [ {
+            "risk_code" : "11",
+            "description" : "The input last name is not associated with the input SSN"
+          }, {
+            "risk_code" : "11",
+            "description" : "The input SSN is associated with a different name and address"
+          }, {
+            "risk_code" : "11",
+            "description" : "Unable to verify date-of-birth"
+          }, {
+            "risk_code" : "11",
+            "description" : "Unable to verify date-of-birth"
+          }, {
+            "risk_code" : "10",
+            "description" : "No date-of-birth reported for the input identity"
+          } ],
+          "verification_indicators" : {
+            "company_name" : "1",
+            "street_address" : "1",
+            "city" : "1",
+            "state" : "1",
+            "zip" : "1",
+            "phone" : "1",
+            "tax_id" : "1"
+          },
+          "business_verification" : {
+            "index" : "20",
+            "description" : "INPUT BUSINESS NAME AND ADDRESS  VERIFIED ON BUSINESS RECORD"
+          },
+          "compliance" : {
+            "sic_code" : "5599",
+            "sic_description" : "",
+            "naics_code" : "",
+            "naics_description" : "",
+            "secretaryOfStateStatus" : "",
+            "lexisNexisStatus" : ""
+          }
+        }
+      },
+      "we_need_codes" : [ {
+        "code" : "G",
+        "satisfied" : false,
+        "desc" : "Business Phone Number",
+        "critical" : "N",
+        "ts" : "2025-Nov-13 12:07:26.922 UTC",
+        "spreadable" : false
+      } ],
+      "account" : {
+        "card_number" : "375182223671002",
+        "account_number" : "375182223671002",
+        "account_token" : "c9c7c10cee65d84bc492930a1a796a6a0e98da088bb162a21325136682e1d03c",
+        "registration" : [ {
+          "source" : "MY_GLOBAL_PAY",
+          "status" : "PENDING"
+        } ]
+      },
+      "execution_context" : {
+        "is_execute_on_resume" : [ {
+          "exec_path_name" : ".",
+          "is_execute_on_resume" : false
+        } ]
+      }
+    } ],
+    "products" : [ {
+      "offer_arrangement_id" : "db74de77-8f5c-497d-a9eb-2d3fcf596ef8",
+      "sub_product_code" : "LO6",
+      "source_code" : "90000FJTPH",
+      "seq_no" : 0,
+      "type" : "Open",
+      "display_family_group" : "OPEN - CHARGE",
+      "product_name" : "American Express Global Pay(TM)",
+      "short_product_id" : "",
+      "card_type" : "",
+      "plastic_color" : "",
+      "product_cd" : "1201",
+      "family_cd" : "LOP",
+      "market_product_code" : "82Y",
+      "platform_cd" : "CE",
+      "lob_cd" : "4",
+      "mkt_segment_cd" : "1",
+      "sub_channel_1" : "",
+      "sub_channel_2" : "",
+      "process_path_cd" : "",
+      "digital_asset_id" : "NUS000000282",
+      "relation_cd" : "",
+      "partner_cd" : "",
+      "display_type" : "OPEN",
+      "description" : "Open Charge",
+      "product_channel_cd" : "",
+      "card_segment_grp_cd" : "62",
+      "finance_liability_cd" : "",
+      "channel_desc" : "",
+      "renewal_frequency_cd" : ""
+    } ],
+    "fraud_assessment_info" : {
+      "authentication_method" : "USER_PROFILE_LOGIN",
+      "authentication_guid" : "8bddc4321959635acf250429fbdb20f4",
+      "authentication_public_guid" : "b7d95cbc98bf16cdd5040e87e98c303a",
+      "browser" : {
+        "last_landing_datetime" : "",
+        "cookie" : "[CS]v1|308D48F813F40E15-40000BB680643B67[CE]",
+        "device_type" : "",
+        "ip_address" : "148.173.101.246",
+        "first_landing_datetime" : "",
+        "tracking_id" : "148.173.101.246-1629131409240",
+        "user_agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36"
+      },
+      "application_url" : "https://loans-1-qa.americanexpress.com/en-us/global-pay/us/apply?sc=90000FJTPH"
+    },
+    "companies" : [ {
+      "number" : 0,
+      "names" : [ {
+        "seq_no" : 0,
+        "legal_name" : "MNBVFC",
+        "doing_business_as" : "TGFVCD"
+      } ],
+      "business_type" : "AGRICULTURE",
+      "company_structure" : "SOLE_PROPRIETORSHIP",
+      "tax_id" : "288977623",
+      "url" : "",
+      "addresses" : [ {
+        "seq_no" : 0,
+        "address" : {
+          "line1" : "2nd NABGS",
+          "city" : "NEW YORK",
+          "postal_code" : "92122",
+          "region" : "CO",
+          "country" : "840",
+          "is_prefilled" : true
+        },
+        "type" : "BUSINESS"
+      } ],
+      "phones" : [ {
+        "phone" : {
+          "phone_number" : "6508813112",
+          "is_prefilled" : true
+        },
+        "type" : "BUSINESS",
+        "seq_no" : 0
+      } ],
+      "is_prefilled" : false,
+      "modified" : [ {
+        "field" : "legal_name"
+      }, {
+        "field" : "business_type"
+      }, {
+        "field" : "company_structure"
+      }, {
+        "field" : "tax_id"
+      } ],
+      "industries" : [ {
+        "type" : "PRIMARY",
+        "classification_standard" : [ {
+          "type" : "SIC_SELF_DECLARED",
+          "value" : "0279",
+          "source" : "SELF_DECLARED",
+          "risk_level_code" : "BASIC_PLUS",
+          "risk_level_description" : "BASIC_PLUS",
+          "recommended_decision" : "APPROVE",
+          "industry_type" : "AGRICULTURE"
+        }, {
+          "type" : "NAICS_SELF_DECLARED",
+          "value" : "115210",
+          "source" : "SELF_DECLARED",
+          "risk_level_code" : "BASIC_PLUS",
+          "risk_level_description" : "BASIC_PLUS",
+          "recommended_decision" : "APPROVE",
+          "industry_type" : "AGRICULTURE"
+        }, {
+          "type" : "SIC_LEXIS_NEXIS",
+          "value" : "5599",
+          "source" : "LEXIS_NEXIS",
+          "risk_level_code" : "BASIC_PLUS",
+          "industry_description" : "",
+          "recommended_decision" : "APPROVE"
+        } ]
+      } ],
+      "industry_risk_level" : "BASIC_PLUS",
+      "industry_risk_description" : "BASIC_PLUS",
+      "scrubbed_addresses" : [ {
+        "type" : "BUSINESS",
+        "address" : {
+          "line1" : "374 EAST ST PO",
+          "line2" : "",
+          "line3" : "",
+          "line4" : "",
+          "city" : "BLOOMSBURG",
+          "state" : "PA",
+          "post_cd" : "178151847",
+          "country_alpha2_cd" : "US",
+          "pbsa" : "N",
+          "cmra" : "N"
+        }
+      } ],
+      "fulfillment_identifiers" : {
+        "cbp_client_id" : "GP12498289"
+      }
+    } ],
+    "is_bank_account_on_file" : true,
+    "journey_name" : "amex_global_pay_us",
+    "ui_stage_info" : [ {
+      "stage" : "CAPTURE_APP",
+      "state" : "COMPLETED"
+    }, {
+      "stage" : "COMPLIANCE",
+      "state" : "COMPLETED"
+    }, {
+      "stage" : "INTERNAL_CHECK",
+      "state" : "COMPLETED"
+    }, {
+      "stage" : "RISK_EVALUATION",
+      "state" : "COMPLETED"
+    }, {
+      "stage" : "FULFILMENT",
+      "state" : "COMPLETED"
+    }, {
+      "stage" : "FINAL_DECISION",
+      "state" : "COMPLETED"
+    } ],
+    "version_id" : "4",
+    "cdc_info" : {
+      "version_id" : "2",
+      "process_history" : [ {
+        "index" : 0,
+        "step_name" : "start",
+        "comp_name" : "DataQualityCheck",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 1,
+        "step_name" : "step_self_industry_check_cornerstone",
+        "comp_name" : "SelfDeclaredIndustryCornerStone",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 2,
+        "step_name" : "step1",
+        "comp_name" : "PaceProductValidationV2",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 3,
+        "step_name" : "step2",
+        "comp_name" : "PacePricing",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 4,
+        "step_name" : "step42",
+        "comp_name" : "SetProductInfo",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 5,
+        "step_name" : "step3",
+        "comp_name" : "SetApplicationSearch",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 6,
+        "step_name" : "step4",
+        "comp_name" : "C360DataStandardization",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 7,
+        "step_name" : "step5",
+        "comp_name" : "DupCheck",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 8,
+        "step_name" : "step6",
+        "comp_name" : "ProfileCheck",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 9,
+        "step_name" : "step8",
+        "comp_name" : "C360Search",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 10,
+        "step_name" : "step9",
+        "comp_name" : "RiskOnboardingDecisionV2",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 11,
+        "step_name" : "step10",
+        "comp_name" : "CreditRiskEvaluation",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 12,
+        "step_name" : "step11",
+        "comp_name" : "FraudRiskEvaluation",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 13,
+        "step_name" : "step13",
+        "comp_name" : "KycAmexInternalSourceCheck",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 14,
+        "step_name" : "step14",
+        "comp_name" : "KycLexisNexisBusinessInstantID",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 15,
+        "step_name" : "step16",
+        "comp_name" : "KycExperianTruVue",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 16,
+        "step_name" : "step17",
+        "comp_name" : "KybLexisNexisBusinessInstantID",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 17,
+        "step_name" : "step_full_industry_check_cornerstone",
+        "comp_name" : "FullIndustryCheckCornerStone",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 18,
+        "step_name" : "step19",
+        "comp_name" : "KybExperianTruVue2",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 19,
+        "step_name" : "step_check_for_beneficial_owners",
+        "comp_name" : "AddBeneficialOwners",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 20,
+        "step_name" : "step_set_condition_codes",
+        "comp_name" : "SetConditionCodes",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 21,
+        "step_name" : "step34",
+        "comp_name" : "CadenceCheck",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 22,
+        "step_name" : "step35",
+        "comp_name" : "BridgerSanctionCheckV2",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 23,
+        "step_name" : "step36",
+        "comp_name" : "CadenceRiskOrchestration",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 24,
+        "step_name" : "step_kyc_sanctions_enhanced_control",
+        "comp_name" : "KycSanctionsEnhancedControl",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 25,
+        "step_name" : "step_kyb_sanctions_enhanced_control",
+        "comp_name" : "KybSanctionsEnhancedControl",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 26,
+        "step_name" : "step37",
+        "comp_name" : "FinalDecision",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 27,
+        "step_name" : "step43",
+        "comp_name" : "ETacPrimary",
+        "ai" : 0,
+        "exec_counter" : 1
+      }, {
+        "index" : 28,
+        "step_name" : "step44",
+        "comp_name" : "CreateClientAccount",
+        "ai" : 0,
+        "exec_counter" : 1
+      } ]
+    },
+    "update_ts" : "2025-Nov-30 15:18:29.993 UTC",
+    "case_id" : "2025309CB00003USD",
+    "journey_type" : "Customer",
+    "is_tin_valid" : true,
+    "cadence_check" : {
+      "risk_score" : "1",
+      "risk_ranking" : "Low",
+      "received_ts" : "2025-Nov-13 12:07:26.938 UTC",
+      "response_code" : "1234",
+      "next_kyc_refresh_review_date" : "1111-01-01"
+    },
+    "bridger_sanction_check" : {
+      "status" : "A",
+      "request_identifier" : "2025317GO2XX000579US"
+    },
+    "decision" : {
+      "final" : {
+        "code" : "A",
+        "reason_code" : "AA",
+        "reason_desc" : "Approved",
+        "ts" : "2025-Nov-13 12:07:27.592 UTC"
+      }
+    },
+    "pend_info" : {
+      "work_basket" : "",
+      "last_pend_work_basket" : "",
+      "assigned_to" : "",
+      "deadline" : "",
+      "step_name" : "",
+      "component_name" : "",
+      "error" : {
+        "code" : "",
+        "message" : "",
+        "details" : "",
+        "is_retryable" : false
+      },
+      "ts" : ""
+    }
+  }
+}

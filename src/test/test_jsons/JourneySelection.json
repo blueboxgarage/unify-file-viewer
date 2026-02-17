@@ -1,0 +1,2416 @@
+{
+  "decision_table": {
+    "version": "1",
+    "match_policy": "first_match",
+    "no_match_policy": "return_none",
+    "cols": [
+      {
+        "name": "IACode",
+        "type": "evaluate",
+        "data_type": "string"
+      },
+      {
+        "name": "application_category",
+        "type": "evaluate",
+        "data_type": "string"
+      },
+      {
+        "name": "application_system",
+        "type": "evaluate",
+        "data_type": "string"
+      },
+      {
+        "name": "product_lob_code",
+        "type": "evaluate",
+        "data_type": "string"
+      },
+      {
+        "name": "country_code",
+        "type": "evaluate",
+        "data_type": "string"
+      },
+      {
+        "name": "is_sas",
+        "type": "evaluate",
+        "data_type": "string"
+      },
+      {
+        "name": "vendor_code",
+        "type": "evaluate",
+        "data_type": "string"
+      },
+      {
+        "name": "journey_discriminator",
+        "type": "return",
+        "data_type": "string"
+      },
+      {
+        "name": "journey_name",
+        "type": "return",
+        "data_type": "string"
+      }
+    ],
+    "rows": [
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= PERSONAL_LOANS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 840"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "personal_loans_us"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= PERSONAL_LOANS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 124"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "personal_loans_ca"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= PERSONAL_LOANS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 036"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "personal_loans_au"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_OR_OPEN_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 250"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "consumer_card_fr"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_OR_OPEN_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= CPS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 392"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "consumer_card_jp"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_OR_OPEN_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= CPS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 752"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "consumer_card_se"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_OR_OPEN_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= CPS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 356"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "consumer_card_in"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CORPORATE_CARD"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 356"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "commercial_card_in"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_OR_OPEN_CARDS_SAS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 356"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "newcard_sas_in"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_OR_OPEN_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= SBS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 392"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "open_card_jp"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "IN CONSUMER_CARDS, SMALL_BUSINESS_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 380"
+          },
+          {
+            "name": "is_sas",
+            "value": "= true"
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "newcard_sas_it"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": null
+          },
+          {
+            "name": "application_category",
+            "value": "IN CONSUMER_OR_OPEN_CARDS, CONSUMER_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 380"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "consumer_card_it"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= CPS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 276"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "consumer_card_de"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= BUSINESS_CHECKING_ACCOUNT"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 840"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "business_checking_acc_us"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= BUSINESS_CHECKING_ACCOUNT_USER_ONBOARDING"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 840"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "business_checking_acc_user_onboarding_us"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= GLOBAL_PAY"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 840"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "amex_global_pay_us"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= PERSONAL_SAVINGS_ACCOUNT"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 840"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "personal_savings_us"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= MIDDLE_MARKET"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 826"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INSTITUTION"
+          },
+          {
+            "name": "journey_name",
+            "value": "commercial_mm_uk"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CORPORATE_PROGRAM"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 840"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INSTITUTION"
+          },
+          {
+            "name": "journey_name",
+            "value": "commercial_mm_us"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= PERSONAL_CHECKING_ACCOUNT"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 840"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "personal_checking_acc_us"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= PERSONAL_CHECKING_ACCOUNT_JOINT_OWNER"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 840"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "personal_checking_acc_us"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= SMALL_BUSINESS_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= SBS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 380"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "small_business_card_it"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= SMALL_BUSINESS_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 380"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "amazon_it"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= ACCOUNTS_PAYABLE_AUTOMATION"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 840"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INSTITUTION"
+          },
+          {
+            "name": "journey_name",
+            "value": "one_ap_onboard_us"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= ACCOUNTS_PAYABLE_AUTOMATION_ACH"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 840"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "one_ap_ach_onboard_us"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= SMALL_BUSINESS_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": "= GO2"
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= SBS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 276"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": "= AZ"
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "small_business_card_de"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_OR_OPEN_CARDS_SAS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 840"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "newcard_sas_us"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_OR_OPEN_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 840"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "ff_newcard_us"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_OR_OPEN_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= CPS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 484"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "consumer_card_mx"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_OR_OPEN_CARDS_SAS_D"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 840"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "derog_sas_us"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_OR_OPEN_CARDS_SAS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 392"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "newcard_sas_jp"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_OR_OPEN_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= SBS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 484"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "open_card_mx"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_OR_OPEN_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= CPS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 724"
+          },
+          {
+            "name": "is_sas",
+            "value": "= false"
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "consumer_card_es"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_OR_OPEN_CARDS_SAS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 752"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "newcard_sas_se"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_OR_OPEN_CARDS_SAS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 484"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "newcard_sas_mx"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= SMALL_BUSINESS_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= SBS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 484"
+          },
+          {
+            "name": "is_sas",
+            "value": "= false"
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "small_business_card_company_mx"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CORPORATE_CARD"
+          },
+          {
+            "name": "application_system",
+            "value": "= CAPS"
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 724"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "corporate_card_fct_kyc_refresh"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CORPORATE_CARD"
+          },
+          {
+            "name": "application_system",
+            "value": "= CAPS"
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 528"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "corporate_card_fct_kyc_refresh"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CORPORATE_CARD"
+          },
+          {
+            "name": "application_system",
+            "value": "= CAPS"
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 276"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "corporate_card_fct_kyc_refresh"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CORPORATE_CARD"
+          },
+          {
+            "name": "application_system",
+            "value": "= CAPS"
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 826"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "corporate_card_fct_kyc_refresh"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CORPORATE_CARD"
+          },
+          {
+            "name": "application_system",
+            "value": "= CAPS"
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 250"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "corporate_card_fct_kyc_refresh"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CORPORATE_CARD"
+          },
+          {
+            "name": "application_system",
+            "value": "= SWAP"
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 702"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "corporate_card_fct_kyc_refresh"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= SMALL_BUSINESS_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 484"
+          },
+          {
+            "name": "is_sas",
+            "value": "= true"
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "newcard_sas_mx"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= SMALL_BUSINESS_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= SBS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 276"
+          },
+          {
+            "name": "is_sas",
+            "value": "= false"
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "small_business_card_de"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= SMALL_BUSINESS_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= SBS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 724"
+          },
+          {
+            "name": "is_sas",
+            "value": "= false"
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "small_business_card_es"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "IN SMALL_BUSINESS_CARDS, CONSUMER_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 724"
+          },
+          {
+            "name": "is_sas",
+            "value": "= true"
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "newcard_sas_es"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "IN SMALL_BUSINESS_CARDS, CONSUMER_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": "= GO2"
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 276"
+          },
+          {
+            "name": "is_sas",
+            "value": "= true"
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "newcard_sas_de"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "IN SMALL_BUSINESS_CARDS, CONSUMER_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 528"
+          },
+          {
+            "name": "is_sas",
+            "value": "= true"
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "newcard_sas_nl"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "IN CONSUMER_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= CPS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 528"
+          },
+          {
+            "name": "is_sas",
+            "value": "= false"
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "consumer_card_nl"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "IN CONSUMER_OR_OPEN_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= CPS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 528"
+          },
+          {
+            "name": "is_sas",
+            "value": "= false"
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "consumer_card_nl"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= SMALL_BUSINESS_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 276"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": "= AZ"
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "amazon_de"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= CPS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 702"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "consumer_card_sg"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= SMALL_BUSINESS_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= SBS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 702"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "small_business_card_sg"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= CPS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 528"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "consumer_card_nl"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 554"
+          },
+          {
+            "name": "is_sas",
+            "value": "= false"
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "consumer_card_nz"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= CPS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 056"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "consumer_card_be"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "IN SMALL_BUSINESS_CARDS, CONSUMER_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": ""
+          },
+          {
+            "name": "country_code",
+            "value": "= 702"
+          },
+          {
+            "name": "is_sas",
+            "value": "= true"
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "newcard_sas_sg"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= SMALL_BUSINESS_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": "= SBS"
+          },
+          {
+            "name": "country_code",
+            "value": "= 554"
+          },
+          {
+            "name": "is_sas",
+            "value": ""
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "small_business_card_nz"
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "name": "IACode",
+            "value": ""
+          },
+          {
+            "name": "application_category",
+            "value": "= CONSUMER_CARDS"
+          },
+          {
+            "name": "application_system",
+            "value": ""
+          },
+          {
+            "name": "product_lob_code",
+            "value": null
+          },
+          {
+            "name": "country_code",
+            "value": "= 554"
+          },
+          {
+            "name": "is_sas",
+            "value": "= true"
+          },
+          {
+            "name": "vendor_code",
+            "value": ""
+          },
+          {
+            "name": "journey_discriminator",
+            "value": "INDIVIDUAL"
+          },
+          {
+            "name": "journey_name",
+            "value": "newcard_sas_nz"
+          }
+        ]
+      }
+    ]
+  }
+}

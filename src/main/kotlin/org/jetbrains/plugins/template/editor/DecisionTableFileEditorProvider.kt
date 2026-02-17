@@ -38,7 +38,11 @@ data class DecisionTable(
 )
 data class DTColumn(val name: String = "", val type: String = "", @param:JsonProperty("data_type") val dataType: String = "")
 data class DTRow(var cols: MutableList<DTCell> = mutableListOf())
-data class DTCell(val name: String = "", val value: String = "")
+data class DTCell(
+    val name: String = "",
+    @param:JsonProperty(required = false)
+    val value: String? = ""
+)
 
 object DecisionTableJsonUtil {
     private val mapper = jacksonObjectMapper()
@@ -55,6 +59,7 @@ object DecisionTableJsonUtil {
     }
 }
 
+@Suppress("UNUSED")
 class DecisionTableFileEditorProvider : FileEditorProvider {
     override fun accept(project: Project, file: VirtualFile): Boolean {
         return file.extension == "json"
@@ -175,18 +180,35 @@ class DecisionTableFileEditor(private val file: VirtualFile) : UserDataHolderBas
             try {
                 val chooser = JFileChooser()
                 chooser.dialogTitle = "Export as CSV"
+                // Set default directory to the file's parent if possible
+                val parentDir = file.parent?.path ?: System.getProperty("user.home")
+                chooser.currentDirectory = java.io.File(parentDir)
                 chooser.selectedFile = java.io.File(file.nameWithoutExtension + ".csv")
                 val result = chooser.showSaveDialog(panel)
                 if (result == JFileChooser.APPROVE_OPTION) {
                     val csvFile = chooser.selectedFile
                     val csvContent = model.toCsv()
-                    csvFile.writeText(csvContent)
-                    statusLabel.text = "Exported to ${'$'}{csvFile.absolutePath}"
-                    JOptionPane.showMessageDialog(panel, "Exported to ${'$'}{csvFile.absolutePath}", "Export CSV", JOptionPane.INFORMATION_MESSAGE)
+                    try {
+                        csvFile.writeText(csvContent)
+                        statusLabel.text = "Exported to ${csvFile.absolutePath}"
+                        JOptionPane.showMessageDialog(panel, "Exported to ${csvFile.absolutePath}", "Export CSV", JOptionPane.INFORMATION_MESSAGE)
+                        // Offer to open the file location in Finder
+                        val open = JOptionPane.showConfirmDialog(panel, "Open containing folder?", "Export CSV", JOptionPane.YES_NO_OPTION)
+                        if (open == JOptionPane.YES_OPTION) {
+                            val runtime = Runtime.getRuntime()
+                            runtime.exec(arrayOf("open", csvFile.parent))
+                        }
+                    } catch (ex: Exception) {
+                        statusLabel.text = "Failed to write file: ${ex.message}"
+                        JOptionPane.showMessageDialog(panel, "Failed to write file: ${ex.message}", "Error", JOptionPane.ERROR_MESSAGE)
+                    }
                 }
-            } catch (_: Exception) {
-                statusLabel.text = "Failed to export."
-                JOptionPane.showMessageDialog(panel, "Failed to export.", "Error", JOptionPane.ERROR_MESSAGE)
+            } catch (_: OutOfMemoryError) {
+                statusLabel.text = "File too large to export. Out of memory."
+                JOptionPane.showMessageDialog(panel, "File too large to export. Out of memory.", "Error", JOptionPane.ERROR_MESSAGE)
+            } catch (ex: Exception) {
+                statusLabel.text = "Failed to export: ${ex.message}"
+                JOptionPane.showMessageDialog(panel, "Failed to export: ${ex.message}", "Error", JOptionPane.ERROR_MESSAGE)
             }
         }
         // Keyboard shortcuts
@@ -275,7 +297,7 @@ class DecisionTableTableModel(
     fun toCsv(): String {
         val header = decisionTable.cols.joinToString(",") { it.name }
         val rows = decisionTable.rows.joinToString("\n") { row ->
-            row.cols.joinToString(",") { cell -> cell.value }
+            row.cols.joinToString(",") { cell -> cell.value ?: "" }
         }
         return "$header\n$rows"
     }
@@ -291,7 +313,7 @@ class UnifyFileViewerProvider : FileEditorProvider {
     }
 
     override fun getEditorTypeId(): String = "unify-file-viewer"
-    override fun getPolicy(): FileEditorPolicy = FileEditorPolicy.PLACE_BEFORE_DEFAULT_EDITOR
+    override fun getPolicy(): FileEditorPolicy = FileEditorPolicy.PLACE_AFTER_DEFAULT_EDITOR
 }
 
 class UnifyFileViewerEditor(private val file: VirtualFile) : UserDataHolderBase(), FileEditor {
@@ -311,7 +333,7 @@ class UnifyFileViewerEditor(private val file: VirtualFile) : UserDataHolderBase(
         switchPanel.add(explorerButton)
         panel.add(switchPanel, java.awt.BorderLayout.NORTH)
         // Use ExploreModelPanel with path highlight callback
-        val explorePanel = ExploreModelPanel(file.inputStream.bufferedReader().use { it.readText() }) { jsonPath ->
+        val explorePanel = ExploreModelPanel(file.inputStream.bufferedReader().use { it.readText() }) { _ ->
             // Switch to editor view and highlight path
             panel.remove(currentView)
             currentView = editorView.component

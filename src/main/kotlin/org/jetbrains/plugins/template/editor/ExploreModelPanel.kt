@@ -21,13 +21,16 @@ import javax.swing.tree.TreePath
 class ExploreModelPanel(json: String, onPathSelected: ((String) -> Unit)? = null) : JPanel(BorderLayout()) {
     private val pathField = JTextField()
     private val copyButton = JButton("Copy Path")
-    private val highlightButton = JButton("Highlight in Editor")
     private var selectedPath: String? = null
 
     init {
         val rootNode = try {
             ObjectMapper().readTree(json)
+        } catch (e: OutOfMemoryError) {
+            JOptionPane.showMessageDialog(this, "File too large to parse. Out of memory.", "Error", JOptionPane.ERROR_MESSAGE)
+            null
         } catch (e: Exception) {
+            JOptionPane.showMessageDialog(this, "Failed to parse JSON: ${e.message}", "Error", JOptionPane.ERROR_MESSAGE)
             null
         }
         val treeRoot = if (rootNode != null) createTreeNode("root", rootNode) else DefaultMutableTreeNode("Invalid JSON")
@@ -38,7 +41,6 @@ class ExploreModelPanel(json: String, onPathSelected: ((String) -> Unit)? = null
         controls.add(JLabel("Path: "))
         controls.add(pathField)
         controls.add(copyButton)
-        controls.add(highlightButton)
         add(controls, BorderLayout.NORTH)
         add(JScrollPane(tree), BorderLayout.CENTER)
 
@@ -53,9 +55,6 @@ class ExploreModelPanel(json: String, onPathSelected: ((String) -> Unit)? = null
                 clipboard.setContents(StringSelection(it), null)
                 JOptionPane.showMessageDialog(this, "Path copied to clipboard!", "Copy", JOptionPane.INFORMATION_MESSAGE)
             }
-        }
-        highlightButton.addActionListener {
-            selectedPath?.let { onPathSelected?.invoke(it) }
         }
     }
 
