@@ -38,7 +38,7 @@ Unify File Viewer is an IntelliJ plugin that lets you visually explore and edit 
 
 ### Download from Releases
 1. Go to the `releases` directory in this repository.
-2. Download the latest ZIP file (e.g., `IntelliJ Platform Plugin Template-2.4.1.zip`).
+2. Download the latest ZIP file (e.g., `IntelliJ Platform Plugin Template-2.4.3.zip`).
 3. In IntelliJ IDEA, go to **Settings > Plugins > ⚙️ > Install Plugin from Disk...**
 4. Select the downloaded ZIP file and follow the prompts to install.
 

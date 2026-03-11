@@ -23,6 +23,7 @@ import java.beans.PropertyChangeListener
 import com.fasterxml.jackson.databind.JsonNode
 import javax.swing.JFileChooser
 import org.jetbrains.annotations.NotNull
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
 
 // Data classes for the decision table JSON structure
 // (You can expand these as needed to match your JSON schema)
@@ -112,12 +113,14 @@ class DecisionTableFileEditor(private val file: VirtualFile) : UserDataHolderBas
         val deleteRowButton = JButton("Delete Row")
         val deleteColButton = JButton("Delete Column")
         val exportCsvButton = JButton("Export CSV")
+        val exportXlsxButton = JButton("Export XLSX")
         saveButton.toolTipText = "Save changes to file"
         addRowButton.toolTipText = "Add a new row"
         addColButton.toolTipText = "Add a new column"
         deleteRowButton.toolTipText = "Delete selected row"
         deleteColButton.toolTipText = "Delete selected column"
         exportCsvButton.toolTipText = "Export table as CSV"
+        exportXlsxButton.toolTipText = "Export table as XLSX"
         // Optionally set icons if available
         // saveButton.icon = ...
         // addRowButton.icon = ...
@@ -131,6 +134,7 @@ class DecisionTableFileEditor(private val file: VirtualFile) : UserDataHolderBas
         buttonPanel.add(deleteRowButton)
         buttonPanel.add(deleteColButton)
         buttonPanel.add(exportCsvButton)
+        buttonPanel.add(exportXlsxButton)
         panel.add(buttonPanel, java.awt.BorderLayout.NORTH)
         panel.add(statusLabel, java.awt.BorderLayout.SOUTH)
 
@@ -211,6 +215,38 @@ class DecisionTableFileEditor(private val file: VirtualFile) : UserDataHolderBas
                 JOptionPane.showMessageDialog(panel, "Failed to export: ${ex.message}", "Error", JOptionPane.ERROR_MESSAGE)
             }
         }
+        exportXlsxButton.addActionListener {
+            try {
+                val chooser = JFileChooser()
+                chooser.dialogTitle = "Export as XLSX"
+                val parentDir = file.parent?.path ?: System.getProperty("user.home")
+                chooser.currentDirectory = java.io.File(parentDir)
+                chooser.selectedFile = java.io.File(file.nameWithoutExtension + ".xlsx")
+                val result = chooser.showSaveDialog(panel)
+                if (result == JFileChooser.APPROVE_OPTION) {
+                    val selected = chooser.selectedFile
+                    val xlsxFile = if (selected.name.lowercase().endsWith(".xlsx")) selected else java.io.File(selected.absolutePath + ".xlsx")
+                    try {
+                        model.writeToXlsx(xlsxFile)
+                        statusLabel.text = "Exported to ${xlsxFile.absolutePath}"
+                        JOptionPane.showMessageDialog(panel, "Exported to ${xlsxFile.absolutePath}", "Export XLSX", JOptionPane.INFORMATION_MESSAGE)
+                        val open = JOptionPane.showConfirmDialog(panel, "Open containing folder?", "Export XLSX", JOptionPane.YES_NO_OPTION)
+                        if (open == JOptionPane.YES_OPTION) {
+                            Runtime.getRuntime().exec(arrayOf("open", xlsxFile.parent))
+                        }
+                    } catch (ex: Exception) {
+                        statusLabel.text = "Failed to write file: ${ex.message}"
+                        JOptionPane.showMessageDialog(panel, "Failed to write file: ${ex.message}", "Error", JOptionPane.ERROR_MESSAGE)
+                    }
+                }
+            } catch (_: OutOfMemoryError) {
+                statusLabel.text = "File too large to export. Out of memory."
+                JOptionPane.showMessageDialog(panel, "File too large to export. Out of memory.", "Error", JOptionPane.ERROR_MESSAGE)
+            } catch (ex: Exception) {
+                statusLabel.text = "Failed to export: ${ex.message}"
+                JOptionPane.showMessageDialog(panel, "Failed to export: ${ex.message}", "Error", JOptionPane.ERROR_MESSAGE)
+            }
+        }
         // Keyboard shortcuts
         saveButton.mnemonic = 'S'.code
         addRowButton.mnemonic = 'R'.code
@@ -218,6 +254,7 @@ class DecisionTableFileEditor(private val file: VirtualFile) : UserDataHolderBas
         deleteRowButton.mnemonic = 'D'.code
         deleteColButton.mnemonic = 'L'.code
         exportCsvButton.mnemonic = 'E'.code
+        exportXlsxButton.mnemonic = 'X'.code
         return panel
     }
 
@@ -301,6 +338,29 @@ class DecisionTableTableModel(
         }
         return "$header\n$rows"
     }
+
+    fun writeToXlsx(file: java.io.File) {
+        XSSFWorkbook().use { workbook ->
+            val sheet = workbook.createSheet("Decision Table")
+            val headerRow = sheet.createRow(0)
+            decisionTable.cols.forEachIndexed { colIndex, col ->
+                headerRow.createCell(colIndex).setCellValue(col.name)
+            }
+
+            decisionTable.rows.forEachIndexed { rowIndex, row ->
+                val excelRow = sheet.createRow(rowIndex + 1)
+                decisionTable.cols.forEachIndexed { colIndex, col ->
+                    val value = row.cols.find { it.name == col.name }?.value ?: ""
+                    excelRow.createCell(colIndex).setCellValue(value)
+                }
+            }
+
+            decisionTable.cols.indices.forEach { sheet.autoSizeColumn(it) }
+            file.outputStream().use { output ->
+                workbook.write(output)
+            }
+        }
+    }
 }
 
 class UnifyFileViewerProvider : FileEditorProvider {
@@ -332,16 +392,8 @@ class UnifyFileViewerEditor(private val file: VirtualFile) : UserDataHolderBase(
         switchPanel.add(editorButton)
         switchPanel.add(explorerButton)
         panel.add(switchPanel, java.awt.BorderLayout.NORTH)
-        // Use ExploreModelPanel with path highlight callback
-        val explorePanel = ExploreModelPanel(file.inputStream.bufferedReader().use { it.readText() }) { _ ->
-            // Switch to editor view and highlight path
-            panel.remove(currentView)
-            currentView = editorView.component
-            panel.add(currentView, java.awt.BorderLayout.CENTER)
-            panel.revalidate()
-            panel.repaint()
-            // TODO: Implement highlight logic in editorView for jsonPath
-        }
+        // Keep selection interactions inside Explore Model; switching views is button-driven only.
+        val explorePanel = ExploreModelPanel(file.inputStream.bufferedReader().use { it.readText() })
         currentView = explorePanel
         panel.add(currentView, java.awt.BorderLayout.CENTER)
         editorButton.addActionListener {

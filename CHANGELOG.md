@@ -4,6 +4,31 @@
 
 ## [Unreleased]
 
+## [2.4.3] - 2026-03-11
+
+### Added
+
+- Decision Table Editor: add XLSX export support alongside CSV export.
+- Add test coverage for XLSX export output content.
+
+### Changed
+
+- Explore Model: add search/filter, match highlighting, expand/collapse controls, and path format toggle (dot/bracket).
+- Explore Model: add value inspector panel, keyboard shortcuts (`Cmd/Ctrl+F`, `Cmd/Ctrl+C`), and non-blocking status feedback.
+- Explore Model: keep node context on rebuild and keep user interactions in Explorer without auto-switching to table editor.
+
+## [2.4.2] - 2026-03-11
+
+### Changed
+
+- Bump plugin version to `2.4.2` for marketplace deployment.
+
+### Removed
+
+- Remove sample `MyToolWindowFactory` to avoid deprecated and experimental Tool Window API usage.
+
+## [2.4.1] - 2026-03-11
+
 ### Changed
 
 - Upgrade Gradle Wrapper to `9.3.1`
@@ -889,7 +914,10 @@
 - GitHub Actions to automate testing and deployment
 - Kotlin support
 
-[Unreleased]: https://github.com/JetBrains/intellij-platform-plugin-template/compare/2.4.0...HEAD
+[Unreleased]: https://github.com/JetBrains/intellij-platform-plugin-template/compare/2.4.3...HEAD
+[2.4.3]: https://github.com/JetBrains/intellij-platform-plugin-template/compare/2.4.2...2.4.3
+[2.4.2]: https://github.com/JetBrains/intellij-platform-plugin-template/compare/2.4.1...2.4.2
+[2.4.1]: https://github.com/JetBrains/intellij-platform-plugin-template/compare/2.4.0...2.4.1
 [2.4.0]: https://github.com/JetBrains/intellij-platform-plugin-template/compare/2.3.1...2.4.0
 [2.3.1]: https://github.com/JetBrains/intellij-platform-plugin-template/compare/2.3.0...2.3.1
 [2.3.0]: https://github.com/JetBrains/intellij-platform-plugin-template/compare/2.2.0...2.3.0
