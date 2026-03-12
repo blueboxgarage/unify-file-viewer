@@ -9,5 +9,6 @@
 - Explore Model improvements, including richer search behavior and preserving explorer context while navigating.
 - Decision table export support for `.xlsx` output.
 
+## [0.0.1]
 ### Added
 - Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
