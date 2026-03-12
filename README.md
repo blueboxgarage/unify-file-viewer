@@ -39,10 +39,15 @@ To keep everything working, do not remove `<!-- ... -->` sections.
   You can also download the [latest release](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID/versions) from JetBrains Marketplace and install it manually using
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
-- Manually:
+- From source (manual install):
 
-  Download the [latest release](https://github.com/blueboxgarage/unify-file-viewer/releases/latest) and install it manually using
+  Build the plugin locally and install the generated ZIP from `build/distributions/` using
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+
+  Run:
+  `./gradlew clean buildPlugin`
+  Then use:
+  `build/distributions/unify-file-viewer-<version>.zip`
 
 
 ---
