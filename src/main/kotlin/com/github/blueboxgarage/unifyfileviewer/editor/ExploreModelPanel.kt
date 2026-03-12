@@ -73,7 +73,7 @@ class ExploreModelPanel(json: String, onPathSelected: ((String) -> Unit)? = null
 
         val controls = JPanel()
         controls.layout = BoxLayout(controls, BoxLayout.X_AXIS)
-        searchField.toolTipText = "Filter keys and values"
+        searchField.toolTipText = "Filter keys, values, or JSON field text (supports quotes/comma)"
         pathField.isEditable = false
         pathField.toolTipText = "Selected JSON path"
         controls.add(JLabel("Search: "))
@@ -231,14 +231,30 @@ class ExploreModelPanel(json: String, onPathSelected: ((String) -> Unit)? = null
     }
 
     private fun matchesFilter(name: String, node: JsonNode, filter: String): Boolean {
-        val query = filter.lowercase()
-        if (name.lowercase().contains(query)) {
+        val query = normalizeFilterQuery(filter).lowercase()
+        if (query.isBlank()) {
             return true
         }
-        if (node.isValueNode) {
-            return node.asText().lowercase().contains(query)
+
+        val escapedName = name.replace("\"", "\\\"")
+        val jsonFieldText = "\"$escapedName\": ${node.toString()},"
+        val displayText = buildDisplayLabel(name, node)
+
+        return buildList {
+            add(name)
+            add(displayText)
+            add(jsonFieldText)
+            if (node.isValueNode) {
+                add(node.asText())
+            }
+        }.any { candidate ->
+            candidate.lowercase().contains(query)
         }
-        return false
+    }
+
+    private fun normalizeFilterQuery(filter: String): String {
+        // Treat escaped quotes from user input as plain quote for JSON-text matching.
+        return filter.replace("\\\"", "\"")
     }
 
     private fun buildDisplayLabel(name: String, node: JsonNode): String {
